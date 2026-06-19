@@ -75,96 +75,6 @@
       font-size: 0.8rem;
     }
 
-    .user-greeting {
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #1e293b;
-      background: #f1f5f9;
-      padding: 4px 18px 4px 8px;
-      border-radius: 40px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      transition: background 0.15s;
-      border: 1.5px solid transparent;
-    }
-
-    .user-greeting:hover {
-      background: #e2e8f0;
-      border-color: #cbd5e1;
-    }
-
-    .user-greeting .avatar {
-      background: #94a3b8;
-      color: white;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .user-greeting .name-edit {
-      background: transparent;
-      border: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #0f172a;
-      max-width: 140px;
-      padding: 2px 6px;
-      border-radius: 6px;
-      outline: 2px solid transparent;
-      transition: 0.15s;
-    }
-
-    .user-greeting .name-edit::placeholder {
-      color: #94a3b8;
-      font-weight: 400;
-    }
-
-    .user-greeting .name-edit:focus {
-      outline: 2px solid #1e3a5f;
-      background: white;
-    }
-
-    .badge-mode {
-      background: #1e3a5f;
-      color: white;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-weight: 500;
-      font-size: 0.85rem;
-      letter-spacing: 0.2px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      white-space: nowrap;
-    }
-
-    .badge-mode .type-indicator {
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 2px 10px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      letter-spacing: 0.5px;
-    }
-
-    .badge-mode .type-indicator.qcu {
-      background: #34d399;
-      color: #1e293b;
-    }
-
-    .badge-mode .type-indicator.qcm {
-      background: #fbbf24;
-      color: #1e293b;
-    }
-
     .home-title {
       font-size: 1.5rem;
       font-weight: 700;
@@ -274,14 +184,6 @@
     .vignette .meta .badge.type-qcm {
       background: #fbbf24;
       color: #1e293b;
-    }
-
-    .action-buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 20px 0 8px;
     }
 
     .btn {
@@ -798,9 +700,6 @@
       .header-left {
         flex-wrap: wrap;
       }
-      .badge-mode {
-        align-self: flex-start;
-      }
       .progress-block {
         flex-wrap: wrap;
       }
@@ -821,10 +720,6 @@
       }
       .q-text {
         font-size: 0.95rem;
-      }
-      .user-greeting .name-edit {
-        max-width: 100px;
-        font-size: 0.9rem;
       }
       .result-card .big-score {
         font-size: 3rem;
@@ -863,11 +758,6 @@
         <img src="logo-iscg.png" alt="ISCG" id="logoIscg" onerror="this.style.display='none'" />
         <span class="logo-text">ISCG <span>Formation</span></span>
       </div>
-      
-    </div>
-    <div class="badge-mode" id="modeBadge">
-      📘 SSIAP 1
-      <span class="type-indicator qcu">QCU</span>
     </div>
   </div>
 
@@ -1040,11 +930,7 @@
 <script>
   (function() {
     // ===== BANQUE DE QUESTIONS =====
-    // SSIAP 1 : QCU (une seule réponse) - correct est un index simple
-    // TFP APS : QCM (plusieurs réponses) - correct est un tableau d'index
-    
     const QUESTIONS = {
-      // ===== SSIAP 1 - INCENDIE (15 questions QCU) =====
       ssiap1_incendie: [
         { q: "En cas d'incendie, l'agent SSIAP 1 doit en priorité :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: 2, sol: "Évacuer et alerter en priorité." },
         { q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: 2, sol: "Affiché et connu de tous." },
@@ -1062,8 +948,6 @@
         { q: "Le temps d'évacuation est de :", opts: ["5 min", "3 min", "8 min", "10 min"], correct: 0, sol: "5 minutes." },
         { q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: 0, sol: "Obligatoires." },
       ],
-      
-      // ===== SSIAP 1 - PREMIERS SECOURS (15 questions QCU) =====
       ssiap1_secours: [
         { q: "En cas d'obstruction des voies aériennes, l'action prioritaire est :", opts: ["Heimlich", "Respirations", "PLS", "Appel"], correct: 0, sol: "La manœuvre de Heimlich." },
         { q: "La PLS est pour :", opts: ["Conscient", "Inconscient qui respire", "Arrêt cardiaque", "Hémorragie"], correct: 1, sol: "Victime inconsciente qui respire." },
@@ -1081,8 +965,6 @@
         { q: "La victime doit être :", opts: ["Rassurée", "Ignorée", "Déplacée", "Secouée"], correct: 0, sol: "Rassurée." },
         { q: "Le bilan de l'état de la victime est :", opts: ["Primaire", "Secondaire", "Primaire et secondaire", "Aucun"], correct: 2, sol: "Primaire puis secondaire." },
       ],
-      
-      // ===== TFP APS - JURIDIQUE (20 questions QCM) =====
       tfpaps_juridique: [
         { q: "Le TFP APS est un diplôme :", opts: ["D'État", "Privé", "Reconnu", "Optionnel"], correct: [0], sol: "Diplôme d'État reconnu." },
         { q: "La durée de validité du TFP APS est de :", opts: ["1 an", "2 ans", "3 ans", "5 ans"], correct: [2], sol: "3 ans." },
@@ -1105,8 +987,6 @@
         { q: "La réserve opérationnelle concerne :", opts: ["Les pompiers", "Les agents APS", "Les bénévoles", "Les militaires"], correct: [0], sol: "Les sapeurs-pompiers." },
         { q: "Le recyclage TFP APS dure :", opts: ["35h", "70h", "21h", "14h"], correct: [0], sol: "35 heures." },
       ],
-      
-      // ===== TFP APS - TECHNIQUE (15 questions QCM) =====
       tfpaps_technique: [
         { q: "Un extincteur à eau pulvérisée est de couleur :", opts: ["Rouge", "Vert", "Jaune", "Bleu"], correct: [0], sol: "Rouge." },
         { q: "Un extincteur à CO2 est utilisé pour :", opts: ["Feux gras", "Feux électriques", "Feux de bois", "Feux de métaux"], correct: [1], sol: "Pour les feux électriques." },
@@ -1124,8 +1004,6 @@
         { q: "La gaine technique doit être :", opts: ["Étanche", "Coupe-feu", "Ventilée", "Éclairée"], correct: [1], sol: "Coupe-feu." },
         { q: "L'extincteur à mousse est utilisé pour :", opts: ["Feux de bois", "Feux de liquides", "Feux électriques", "Feux de métaux"], correct: [1], sol: "Pour les feux de liquides." },
       ],
-      
-      // ===== TFP APS - SÉCURITÉ (20 questions QCM) =====
       tfpaps_securite: [
         { q: "La mission principale de l'agent APS est :", opts: ["Prévenir les risques", "Secourir", "Accueillir", "Maintenir"], correct: [0], sol: "Prévenir les risques." },
         { q: "L'agent APS doit réaliser :", opts: ["Des rondes", "Des contrôles", "Des interventions", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces missions." },
@@ -1148,8 +1026,6 @@
         { q: "L'agent doit respecter :", opts: ["La confidentialité", "La discrétion", "Le secret professionnel", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
         { q: "La collaboration avec les forces de l'ordre est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Interdite"], correct: [0], sol: "Obligatoire." },
       ],
-      
-      // ===== TFP APS - INCENDIE (15 questions QCM) =====
       tfpaps_incendie: [
         { q: "En cas d'incendie, l'agent APS doit :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: [0, 1], sol: "Évacuer et alerter." },
         { q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: [0, 1], sol: "Affiché et connu." },
@@ -1167,8 +1043,6 @@
         { q: "L'extincteur à CO2 est utilisé pour :", opts: ["Classe A", "Classe B", "Classe E", "Classe D"], correct: [2], sol: "Classe E." },
         { q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
       ],
-      
-      // ===== TFP APS - PREMIERS SECOURS (15 questions QCM) =====
       tfpaps_secours: [
         { q: "En cas d'obstruction des voies aériennes, l'action prioritaire est :", opts: ["Heimlich", "Respirations", "PLS", "Appel"], correct: [0], sol: "La manœuvre de Heimlich." },
         { q: "La PLS est pour :", opts: ["Conscient", "Inconscient qui respire", "Arrêt cardiaque", "Hémorragie"], correct: [1], sol: "Inconscient qui respire." },
@@ -1211,9 +1085,6 @@
     // DOM
     const homePage = document.getElementById('homePage');
     const examPage = document.getElementById('examPage');
-    const userNameInput = document.getElementById('userNameInput');
-    const userAvatar = document.getElementById('userAvatar');
-    const modeBadge = document.getElementById('modeBadge');
     const backHomeBtn = document.getElementById('backHomeBtn');
     const backHomeFromResultBtn = document.getElementById('backHomeFromResultBtn');
     const resetExamBtn = document.getElementById('resetExamBtn');
@@ -1250,38 +1121,6 @@
     const popupExercices = document.getElementById('popupExercices');
     const popupExamen = document.getElementById('popupExamen');
     const popupClose = document.getElementById('popupClose');
-
-    // ===== GESTION DU NOM =====
-    function updateUserName() {
-      const name = userNameInput.value.trim();
-      if (name) {
-        userAvatar.textContent = name.charAt(0).toUpperCase();
-        userAvatar.style.background = '#1e3a5f';
-      } else {
-        userAvatar.textContent = '?';
-        userAvatar.style.background = '#94a3b8';
-      }
-      try { localStorage.setItem('userName', name); } catch (e) {}
-    }
-    function loadUserName() {
-      try {
-        const saved = localStorage.getItem('userName');
-        if (saved) userNameInput.value = saved;
-      } catch (e) {}
-      updateUserName();
-    }
-    userNameInput.addEventListener('blur', updateUserName);
-    userNameInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') e.preventDefault(); userNameInput.blur(); });
-    userNameInput.addEventListener('input', () => {
-      const name = userNameInput.value.trim();
-      if (name) {
-        userAvatar.textContent = name.charAt(0).toUpperCase();
-        userAvatar.style.background = '#1e3a5f';
-      } else {
-        userAvatar.textContent = '?';
-        userAvatar.style.background = '#94a3b8';
-      }
-    });
 
     // ===== POPUP =====
     const themeIcons = {
@@ -1331,7 +1170,6 @@
       
       currentMode = mode;
       currentTheme = theme;
-      updateModeBadge();
       const key = `${mode}_${theme}`;
       currentQuestions = QUESTIONS[key] || QUESTIONS.ssiap1_incendie;
       totalQuestions = currentQuestions.length;
@@ -1354,22 +1192,8 @@
           openPopup(mode, theme);
         });
       });
-      // Activer la première vignette par défaut
       const first = document.querySelector('.vignette[data-mode="ssiap1"]');
       if (first) first.classList.add('active');
-    }
-
-    function updateModeBadge() {
-      const isSiap = currentMode === 'ssiap1';
-      isQcm = !isSiap;
-      const label = isSiap ? 'SSIAP 1' : 'TFP APS';
-      const type = isSiap ? 'QCU' : 'QCM';
-      const typeClass = isSiap ? 'qcu' : 'qcm';
-      const icon = isSiap ? '📘' : '🆘';
-      modeBadge.innerHTML = `
-        ${icon} ${label}
-        <span class="type-indicator ${typeClass}">${type}</span>
-      `;
     }
 
     // ===== FONCTIONS DE NOTATION =====
@@ -1698,7 +1522,6 @@
 
     // ===== INIT =====
     function init() {
-      loadUserName();
       initVignettes();
 
       backHomeBtn.addEventListener('click', showHomePage);
