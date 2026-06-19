@@ -43,6 +43,37 @@
       border-bottom: 1px solid #e9edf2;
     }
 
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-container .logo-text {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1e3a5f;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-container .logo-text span {
+      color: #64748b;
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+
     .user-greeting {
       font-weight: 600;
       font-size: 0.95rem;
@@ -64,7 +95,7 @@
     }
 
     .user-greeting .avatar {
-      background: #1e3a5f;
+      background: #94a3b8;
       color: white;
       width: 34px;
       height: 34px;
@@ -88,6 +119,11 @@
       border-radius: 6px;
       outline: 2px solid transparent;
       transition: 0.15s;
+    }
+
+    .user-greeting .name-edit::placeholder {
+      color: #94a3b8;
+      font-weight: 400;
     }
 
     .user-greeting .name-edit:focus {
@@ -568,7 +604,6 @@
       margin-top: 16px;
     }
 
-    /* ===== RÉSULTATS ===== */
     .result-card {
       background: linear-gradient(145deg, #f8fafc, #f1f5f9);
       border-radius: 24px;
@@ -673,6 +708,9 @@
         flex-direction: column;
         align-items: stretch;
       }
+      .header-left {
+        flex-wrap: wrap;
+      }
       .badge-mode {
         align-self: flex-start;
       }
@@ -711,6 +749,12 @@
         gap: 16px;
         flex-wrap: wrap;
       }
+      .logo-container img {
+        height: 60px;
+      }
+      .logo-container .logo-text {
+        font-size: 1.9rem;
+      }
     }
   </style>
 </head>
@@ -719,9 +763,15 @@
 <div class="app-wrapper" id="app">
   <!-- EN-TÊTE -->
   <div class="header">
-    <div class="user-greeting" id="userGreeting" title="Cliquez pour modifier votre nom">
-      <span class="avatar" id="userAvatar">A</span>
-      <input type="text" class="name-edit" id="userNameInput" value="Alex" placeholder="Votre nom" maxlength="20" />
+    <div class="header-left">
+      <div class="logo-container">
+        <img src="logo-iscg.png" alt="ISCG" id="logoIscg" onerror="this.style.display='none'" />
+        <span class="logo-text">ISCG <span>Formation</span></span>
+      </div>
+      <!--<div class="user-greeting" id="userGreeting" title="Cliquez pour modifier votre nom">
+        <span class="avatar" id="userAvatar">?</span>
+        <input type="text" class="name-edit" id="userNameInput" placeholder="Votre nom" maxlength="20" />
+      </div>-->
     </div>
     <div class="badge-mode" id="modeBadge">
       📘 SSIAP 1
@@ -879,7 +929,6 @@
 <script>
   (function() {
     // ===== BANQUE DE QUESTIONS =====
-    // SSIAP 1 : QCM (plusieurs réponses) - correct est un tableau d'index
     const QUESTIONS = {
       ssiap1_juridique: [
         { q: "Parmi les propositions suivantes, lesquelles sont des missions de l'agent SSIAP 1 ?", opts: ["Prévention", "Extinction", "Accueil", "Maintenance"], correct: [0, 1], sol: "Prévention et extinction sont les missions principales." },
@@ -1065,14 +1114,14 @@
     let totalQuestions = 0;
     let isAnswered = false;
     let timerInterval = null;
-    let timeLeft = 60; // 60 secondes
+    let timeLeft = 60;
     let isExamFinished = false;
     let isQcm = true;
     let correctCount = 0;
     let wrongCount = 0;
     let timeoutCount = 0;
     const CIRCUMFERENCE = 2 * Math.PI * 24;
-    const DISPLAY_DELAY = 4000; // 4 secondes d'affichage
+    const DISPLAY_DELAY = 4000;
 
     // DOM
     const homePage = document.getElementById('homePage');
@@ -1108,14 +1157,18 @@
     const statTimeout = document.getElementById('statTimeout');
     const typeDot = document.getElementById('typeDot');
     const typeLabel = document.getElementById('typeLabel');
-    const examTitle = document.getElementById('examTitle');
     const examModeLabel = document.getElementById('examModeLabel');
 
     // ===== GESTION DU NOM =====
     function updateUserName() {
-      const name = userNameInput.value.trim() || 'Invité';
-      userNameInput.value = name;
-      userAvatar.textContent = name.charAt(0).toUpperCase();
+      const name = userNameInput.value.trim();
+      if (name) {
+        userAvatar.textContent = name.charAt(0).toUpperCase();
+        userAvatar.style.background = '#1e3a5f';
+      } else {
+        userAvatar.textContent = '?';
+        userAvatar.style.background = '#94a3b8';
+      }
       try { localStorage.setItem('userName', name); } catch (e) {}
     }
     function loadUserName() {
@@ -1128,8 +1181,14 @@
     userNameInput.addEventListener('blur', updateUserName);
     userNameInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') e.preventDefault(); userNameInput.blur(); });
     userNameInput.addEventListener('input', () => {
-      const name = userNameInput.value.trim() || 'Invité';
-      userAvatar.textContent = name.charAt(0).toUpperCase();
+      const name = userNameInput.value.trim();
+      if (name) {
+        userAvatar.textContent = name.charAt(0).toUpperCase();
+        userAvatar.style.background = '#1e3a5f';
+      } else {
+        userAvatar.textContent = '?';
+        userAvatar.style.background = '#94a3b8';
+      }
     });
 
     // ===== CHARGEMENT DES VIGNETTES =====
@@ -1224,7 +1283,6 @@
       finalComment.className = `comment ${cssClass}`;
       finalSubComment.textContent = subComment;
 
-      // Statistiques détaillées
       statCorrect.textContent = correctCount;
       statWrong.textContent = wrongCount;
       statTimeout.textContent = timeoutCount;
@@ -1263,7 +1321,6 @@
       qNumber.textContent = `Question ${currentIndex+1} / ${totalQuestions}`;
       questionText.textContent = q.q;
       
-      // Type d'indicateur
       typeDot.className = `dot ${isQcm ? 'qcm' : 'qcu'}`;
       typeLabel.textContent = isQcm ? 'QCM · plusieurs réponses possibles' : 'QCU · une seule réponse';
       
@@ -1293,9 +1350,6 @@
               inputInside.checked = !inputInside.checked;
             } else {
               inputInside.checked = true;
-            }
-            // Pour les checkbox, on ne valide pas immédiatement
-            if (inputInside.type === 'radio') {
               handleOptionSelect();
             }
           }
@@ -1303,7 +1357,6 @@
         optionsContainer.appendChild(div);
       });
 
-      // Bouton de validation pour QCM
       const existingValidateBtn = document.getElementById('validateBtn');
       if (existingValidateBtn) existingValidateBtn.remove();
       
@@ -1342,24 +1395,20 @@
       });
 
       if (selectedIndexes.length === 0) {
-        // Aucune sélection
         return;
       }
 
       isAnswered = true;
       stopTimer();
 
-      // Vérification
       const correct = q.correct;
       let isCorrect = false;
       
       if (isQcm) {
-        // QCM : comparer les tableaux triés
         const sortedSelected = [...selectedIndexes].sort();
         const sortedCorrect = [...correct].sort();
         isCorrect = JSON.stringify(sortedSelected) === JSON.stringify(sortedCorrect);
       } else {
-        // QCU : un seul index
         isCorrect = selectedIndexes[0] === correct;
       }
 
@@ -1370,12 +1419,10 @@
         wrongCount++;
       }
 
-      // Afficher la solution
       solutionText.textContent = q.sol || 'Aucune solution fournie.';
       solutionsBox.classList.add('show');
       solutionsBox.className = 'solutions-box show';
 
-      // Mettre en évidence les options
       const optionItems = document.querySelectorAll('.option-item');
       optionItems.forEach((item, idx) => {
         const input = item.querySelector('input');
@@ -1397,14 +1444,12 @@
         }
       });
 
-      // Supprimer le bouton de validation QCM
       const validateBtn = document.getElementById('validateBtn');
       if (validateBtn) validateBtn.remove();
 
       updateProgressAndScore();
       nextQuestionBtn.disabled = false;
 
-      // Passage automatique après délai
       setTimeout(() => {
         if (!isExamFinished) {
           goToNextQuestion();
@@ -1435,7 +1480,6 @@
         }
       });
 
-      // Supprimer le bouton de validation QCM
       const validateBtn = document.getElementById('validateBtn');
       if (validateBtn) validateBtn.remove();
 
@@ -1466,7 +1510,7 @@
       timerInterval = setInterval(() => {
         timeLeft--;
         timerText.textContent = Math.max(0, timeLeft);
-        const offset = CIRCUMFERENCE * (1 - timeLeft / 90);
+        const offset = CIRCUMFERENCE * (1 - timeLeft / 60);
         timerCircle.style.strokeDashoffset = Math.min(CIRCUMFERENCE, Math.max(0, offset));
         if (timeLeft <= 0) {
           stopTimer();
