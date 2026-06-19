@@ -686,6 +686,26 @@
       color: #475569;
     }
 
+    .scrollable-grid {
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .scrollable-grid::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .scrollable-grid::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 10px;
+    }
+
+    .scrollable-grid::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
     @media (max-width: 640px) {
       .app-wrapper {
         padding: 16px;
@@ -745,6 +765,9 @@
         font-size: 0.85rem;
         padding: 10px 20px;
       }
+      .scrollable-grid {
+        max-height: 300px;
+      }
     }
   </style>
 </head>
@@ -789,49 +812,121 @@
     </div>
 
     <div class="section-title">🆘 TFP APS <span class="line"></span></div>
-    <div class="vignette-grid" id="tfpapsGrid">
-      <div class="vignette" data-mode="tfpaps" data-theme="juridique">
+    <div class="vignette-grid scrollable-grid" id="tfpapsGrid">
+      <div class="vignette" data-mode="tfpaps" data-theme="uv2_juridique">
         <span class="icon">⚖️</span>
-        <h4>Juridique</h4>
-        <p>Réglementation &amp; lois</p>
+        <h4>UV 2 – Juridique</h4>
+        <p>Bases juridiques</p>
         <div class="meta">
           <span class="badge count">20</span>
           <span class="badge type-qcm">QCM</span>
         </div>
       </div>
-      <div class="vignette" data-mode="tfpaps" data-theme="technique">
-        <span class="icon">🔧</span>
-        <h4>Technique</h4>
-        <p>Équipements &amp; extincteurs</p>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv3_conflits">
+        <span class="icon">🤝</span>
+        <h4>UV 3 – Conflits</h4>
+        <p>Gestion des conflits</p>
         <div class="meta">
           <span class="badge count">15</span>
           <span class="badge type-qcm">QCM</span>
         </div>
       </div>
-      <div class="vignette" data-mode="tfpaps" data-theme="securite">
-        <span class="icon">🛡️</span>
-        <h4>Sécurité</h4>
-        <p>Prévention &amp; rondes</p>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv4_strategique">
+        <span class="icon">🎯</span>
+        <h4>UV 4 – Stratégique</h4>
+        <p>Module stratégique</p>
         <div class="meta">
-          <span class="badge count">20</span>
+          <span class="badge count">15</span>
           <span class="badge type-qcm">QCM</span>
         </div>
       </div>
-      <div class="vignette" data-mode="tfpaps" data-theme="incendie">
+      <div class="vignette" data-mode="tfpaps" data-theme="uv5_incendie">
         <span class="icon">🔥</span>
-        <h4>Incendie</h4>
-        <p>Évacuation &amp; extincteurs</p>
+        <h4>UV 5 – Incendie</h4>
+        <p>Connaissances incendie</p>
         <div class="meta">
           <span class="badge count">15</span>
           <span class="badge type-qcm">QCM</span>
         </div>
       </div>
-      <div class="vignette" data-mode="tfpaps" data-theme="secours">
-        <span class="icon">🚑</span>
-        <h4>Premiers secours</h4>
-        <p>Gestes &amp; PLS</p>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv6_cpp">
+        <span class="icon">📜</span>
+        <h4>UV 6 – Art. 73 CPP</h4>
+        <p>Code procédure pénale</p>
+        <div class="meta">
+          <span class="badge count">12</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv7_terrorisme">
+        <span class="icon">⚠️</span>
+        <h4>UV 7 – Terrorisme</h4>
+        <p>Risque terroriste</p>
+        <div class="meta">
+          <span class="badge count">12</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv8_professionnel">
+        <span class="icon">💼</span>
+        <h4>UV 8 – Professionnel</h4>
+        <p>Connaissances métier</p>
         <div class="meta">
           <span class="badge count">15</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv9_palpation">
+        <span class="icon">✋</span>
+        <h4>UV 9 – Palpation</h4>
+        <p>Palpation de sécurité</p>
+        <div class="meta">
+          <span class="badge count">10</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv10_electronique">
+        <span class="icon">📡</span>
+        <h4>UV 10 – Électronique</h4>
+        <p>Systèmes électroniques</p>
+        <div class="meta">
+          <span class="badge count">12</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv11_risques">
+        <span class="icon">📊</span>
+        <h4>UV 11 – Risques</h4>
+        <p>Gestion des risques</p>
+        <div class="meta">
+          <span class="badge count">12</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv12_evenementiel">
+        <span class="icon">🎪</span>
+        <h4>UV 12 – Événementiel</h4>
+        <p>Sécurité événementielle</p>
+        <div class="meta">
+          <span class="badge count">12</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv13_conflits_degrades">
+        <span class="icon">⚡</span>
+        <h4>UV 13 – Conflits dégradés</h4>
+        <p>Situations critiques</p>
+        <div class="meta">
+          <span class="badge count">10</span>
+          <span class="badge type-qcm">QCM</span>
+        </div>
+      </div>
+      <div class="vignette" data-mode="tfpaps" data-theme="uv14_industriel">
+        <span class="icon">🏭</span>
+        <h4>UV 14 – Industriel</h4>
+        <p>Sécurité industrielle</p>
+        <div class="meta">
+          <span class="badge count">10</span>
           <span class="badge type-qcm">QCM</span>
         </div>
       </div>
@@ -929,138 +1024,398 @@
 
 <script>
   (function() {
-    // ===== BANQUE DE QUESTIONS =====
-    const QUESTIONS = {
+    // ===== BANQUE DE QUESTIONS UNIFIÉE =====
+    // Chaque question a un ID unique pour éviter les doublons
+    // Les exercices tirent des questions aléatoirement
+    // Les examens utilisent des séries spécifiques
+    
+    const QUESTION_BANK = {
+      // ===== SSIAP 1 - INCENDIE =====
       ssiap1_incendie: [
-        { q: "En cas d'incendie, l'agent SSIAP 1 doit en priorité :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: 2, sol: "Évacuer et alerter en priorité." },
-        { q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: 2, sol: "Affiché et connu de tous." },
-        { q: "La classe de feu B concerne :", opts: ["Les liquides", "Les solides", "Les gaz", "Les métaux"], correct: 0, sol: "Les liquides inflammables." },
-        { q: "Le RIA est utilisé par :", opts: ["Les pompiers", "Les agents SSIAP", "Les pompiers et agents", "Le public"], correct: 2, sol: "Les pompiers et les agents formés." },
-        { q: "La colonne sèche est :", opts: ["Non alimentée", "Alimentée", "Optionnelle", "Interdite"], correct: 0, sol: "Non alimentée en eau." },
-        { q: "Le système de détection est :", opts: ["Automatique", "Manuel", "Automatique ou manuel", "Aucun"], correct: 2, sol: "Automatique ou manuel." },
-        { q: "L'évacuation doit être :", opts: ["Rapide", "Ordonnée", "Rapide et ordonnée", "Lente"], correct: 2, sol: "Rapide mais ordonnée." },
-        { q: "Le désenfumage permet :", opts: ["L'évacuation", "La visibilité", "L'évacuation et la visibilité", "L'extinction"], correct: 2, sol: "Faciliter l'évacuation et la visibilité." },
-        { q: "Les exutoires de fumée sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: 0, sol: "Obligatoires dans les ERP." },
-        { q: "La sirène d'alarme est :", opts: ["Audible", "Visuelle", "Audible et visuelle", "Silencieuse"], correct: 2, sol: "Audible et visuelle." },
-        { q: "Le déclencheur manuel est :", opts: ["Rouge", "Jaune", "Vert", "Bleu"], correct: 0, sol: "Rouge." },
-        { q: "La distance maximale vers un RIA est :", opts: ["30m", "50m", "20m", "40m"], correct: 0, sol: "30 mètres." },
-        { q: "L'extincteur à CO2 est utilisé pour :", opts: ["Classe A", "Classe B", "Classe E", "Classe D"], correct: 2, sol: "Classe E (électrique)." },
-        { q: "Le temps d'évacuation est de :", opts: ["5 min", "3 min", "8 min", "10 min"], correct: 0, sol: "5 minutes." },
-        { q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: 0, sol: "Obligatoires." },
+        { id: 'si1', q: "En cas d'incendie, l'agent SSIAP 1 doit en priorité :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: 2, sol: "Évacuer et alerter en priorité." },
+        { id: 'si2', q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: 2, sol: "Affiché et connu de tous." },
+        { id: 'si3', q: "La classe de feu B concerne :", opts: ["Les liquides", "Les solides", "Les gaz", "Les métaux"], correct: 0, sol: "Les liquides inflammables." },
+        { id: 'si4', q: "Le RIA est utilisé par :", opts: ["Les pompiers", "Les agents SSIAP", "Les pompiers et agents", "Le public"], correct: 2, sol: "Les pompiers et les agents formés." },
+        { id: 'si5', q: "La colonne sèche est :", opts: ["Non alimentée", "Alimentée", "Optionnelle", "Interdite"], correct: 0, sol: "Non alimentée en eau." },
+        { id: 'si6', q: "Le système de détection est :", opts: ["Automatique", "Manuel", "Automatique ou manuel", "Aucun"], correct: 2, sol: "Automatique ou manuel." },
+        { id: 'si7', q: "L'évacuation doit être :", opts: ["Rapide", "Ordonnée", "Rapide et ordonnée", "Lente"], correct: 2, sol: "Rapide mais ordonnée." },
+        { id: 'si8', q: "Le désenfumage permet :", opts: ["L'évacuation", "La visibilité", "L'évacuation et la visibilité", "L'extinction"], correct: 2, sol: "Faciliter l'évacuation et la visibilité." },
+        { id: 'si9', q: "Les exutoires de fumée sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: 0, sol: "Obligatoires dans les ERP." },
+        { id: 'si10', q: "La sirène d'alarme est :", opts: ["Audible", "Visuelle", "Audible et visuelle", "Silencieuse"], correct: 2, sol: "Audible et visuelle." },
+        { id: 'si11', q: "Le déclencheur manuel est :", opts: ["Rouge", "Jaune", "Vert", "Bleu"], correct: 0, sol: "Rouge." },
+        { id: 'si12', q: "La distance maximale vers un RIA est :", opts: ["30m", "50m", "20m", "40m"], correct: 0, sol: "30 mètres." },
+        { id: 'si13', q: "L'extincteur à CO2 est utilisé pour :", opts: ["Classe A", "Classe B", "Classe E", "Classe D"], correct: 2, sol: "Classe E (électrique)." },
+        { id: 'si14', q: "Le temps d'évacuation est de :", opts: ["5 min", "3 min", "8 min", "10 min"], correct: 0, sol: "5 minutes." },
+        { id: 'si15', q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: 0, sol: "Obligatoires." },
+        { id: 'si16', q: "La colonne humide est :", opts: ["Alimentée", "Non alimentée", "Optionnelle", "Interdite"], correct: 0, sol: "Alimentée en eau." },
+        { id: 'si17', q: "La pression d'eau du RIA est d'environ :", opts: ["5 bars", "10 bars", "15 bars", "20 bars"], correct: 0, sol: "5 bars." },
+        { id: 'si18', q: "Le débit d'un extincteur est en :", opts: ["L/min", "Kg/min", "L/s", "Kg/s"], correct: 0, sol: "Litres par minute." },
+        { id: 'si19', q: "La charge d'un extincteur à poudre est :", opts: ["1-6 kg", "6-12 kg", "12-20 kg", "20-50 kg"], correct: 1, sol: "Généralement 6 à 12 kg." },
+        { id: 'si20', q: "Le temps de recharge d'un extincteur est :", opts: ["1 an", "2 ans", "5 ans", "10 ans"], correct: 0, sol: "Tous les ans." },
       ],
+      
+      // ===== SSIAP 1 - PREMIERS SECOURS =====
       ssiap1_secours: [
-        { q: "En cas d'obstruction des voies aériennes, l'action prioritaire est :", opts: ["Heimlich", "Respirations", "PLS", "Appel"], correct: 0, sol: "La manœuvre de Heimlich." },
-        { q: "La PLS est pour :", opts: ["Conscient", "Inconscient qui respire", "Arrêt cardiaque", "Hémorragie"], correct: 1, sol: "Victime inconsciente qui respire." },
-        { q: "Le massage cardiaque se fait :", opts: ["Au centre du thorax", "À gauche", "À droite", "Sur le ventre"], correct: 0, sol: "Au centre du thorax." },
-        { q: "La compression thoracique est de :", opts: ["5-6 cm", "2-3 cm", "10 cm", "1 cm"], correct: 0, sol: "5 à 6 cm." },
-        { q: "Le rythme du massage est de :", opts: ["100-120/min", "60/min", "80/min", "140/min"], correct: 0, sol: "100 à 120 compressions par minute." },
-        { q: "Le défibrillateur est utilisé :", opts: ["En cas de FV", "En cas d'asphyxie", "En cas de malaise", "En cas d'hémorragie"], correct: 0, sol: "En cas de fibrillation ventriculaire." },
-        { q: "Le point de compression en cas d'hémorragie est :", opts: ["Au-dessus de la plaie", "En dessous", "Sur la plaie", "À côté"], correct: 0, sol: "Au-dessus de la plaie." },
-        { q: "Le garrot est utilisé en dernier recours :", opts: ["Pour une hémorragie", "Pour une fracture", "Pour une brûlure", "Pour un malaise"], correct: 0, sol: "Pour une hémorragie grave." },
-        { q: "La position latérale de sécurité est aussi appelée :", opts: ["PLS", "PLA", "PPS", "PSS"], correct: 0, sol: "PLS." },
-        { q: "Le numéro d'urgence européen est :", opts: ["112", "15", "18", "17"], correct: 0, sol: "Le 112." },
-        { q: "Le SAMU est joignable au :", opts: ["15", "18", "17", "112"], correct: 0, sol: "15." },
-        { q: "Les pompiers sont joignables au :", opts: ["18", "15", "17", "112"], correct: 0, sol: "18." },
-        { q: "La police est joignable au :", opts: ["17", "15", "18", "112"], correct: 0, sol: "17." },
-        { q: "La victime doit être :", opts: ["Rassurée", "Ignorée", "Déplacée", "Secouée"], correct: 0, sol: "Rassurée." },
-        { q: "Le bilan de l'état de la victime est :", opts: ["Primaire", "Secondaire", "Primaire et secondaire", "Aucun"], correct: 2, sol: "Primaire puis secondaire." },
+        { id: 'ss1', q: "En cas d'obstruction des voies aériennes, l'action prioritaire est :", opts: ["Heimlich", "Respirations", "PLS", "Appel"], correct: 0, sol: "La manœuvre de Heimlich." },
+        { id: 'ss2', q: "La PLS est pour :", opts: ["Conscient", "Inconscient qui respire", "Arrêt cardiaque", "Hémorragie"], correct: 1, sol: "Victime inconsciente qui respire." },
+        { id: 'ss3', q: "Le massage cardiaque se fait :", opts: ["Au centre du thorax", "À gauche", "À droite", "Sur le ventre"], correct: 0, sol: "Au centre du thorax." },
+        { id: 'ss4', q: "La compression thoracique est de :", opts: ["5-6 cm", "2-3 cm", "10 cm", "1 cm"], correct: 0, sol: "5 à 6 cm." },
+        { id: 'ss5', q: "Le rythme du massage est de :", opts: ["100-120/min", "60/min", "80/min", "140/min"], correct: 0, sol: "100 à 120 compressions par minute." },
+        { id: 'ss6', q: "Le défibrillateur est utilisé :", opts: ["En cas de FV", "En cas d'asphyxie", "En cas de malaise", "En cas d'hémorragie"], correct: 0, sol: "En cas de fibrillation ventriculaire." },
+        { id: 'ss7', q: "Le point de compression en cas d'hémorragie est :", opts: ["Au-dessus de la plaie", "En dessous", "Sur la plaie", "À côté"], correct: 0, sol: "Au-dessus de la plaie." },
+        { id: 'ss8', q: "Le garrot est utilisé en dernier recours :", opts: ["Pour une hémorragie", "Pour une fracture", "Pour une brûlure", "Pour un malaise"], correct: 0, sol: "Pour une hémorragie grave." },
+        { id: 'ss9', q: "La position latérale de sécurité est aussi appelée :", opts: ["PLS", "PLA", "PPS", "PSS"], correct: 0, sol: "PLS." },
+        { id: 'ss10', q: "Le numéro d'urgence européen est :", opts: ["112", "15", "18", "17"], correct: 0, sol: "Le 112." },
+        { id: 'ss11', q: "Le SAMU est joignable au :", opts: ["15", "18", "17", "112"], correct: 0, sol: "15." },
+        { id: 'ss12', q: "Les pompiers sont joignables au :", opts: ["18", "15", "17", "112"], correct: 0, sol: "18." },
+        { id: 'ss13', q: "La police est joignable au :", opts: ["17", "15", "18", "112"], correct: 0, sol: "17." },
+        { id: 'ss14', q: "La victime doit être :", opts: ["Rassurée", "Ignorée", "Déplacée", "Secouée"], correct: 0, sol: "Rassurée." },
+        { id: 'ss15', q: "Le bilan de l'état de la victime est :", opts: ["Primaire", "Secondaire", "Primaire et secondaire", "Aucun"], correct: 2, sol: "Primaire puis secondaire." },
+        { id: 'ss16', q: "La position d'attente est :", opts: ["Assise", "Couchée", "Debout", "À genoux"], correct: 1, sol: "Couchée." },
+        { id: 'ss17', q: "La protection de la victime est :", opts: ["Prioritaire", "Secondaire", "Optionnelle", "Inutile"], correct: 0, sol: "Prioritaire." },
+        { id: 'ss18', q: "Le saignement doit être :", opts: ["Comprimé", "Ignoré", "Massé", "Chauffé"], correct: 0, sol: "Comprimé." },
+        { id: 'ss19', q: "La brûlure doit être :", opts: ["Refroidie", "Chauffée", "Massée", "Ignorée"], correct: 0, sol: "Refroidie à l'eau." },
+        { id: 'ss20', q: "Le dégagement d'urgence est :", opts: ["Rapide", "Prudent", "Rapide et prudent", "Lent"], correct: 2, sol: "Rapide mais prudent." },
       ],
-      tfpaps_juridique: [
-        { q: "Le TFP APS est un diplôme :", opts: ["D'État", "Privé", "Reconnu", "Optionnel"], correct: [0], sol: "Diplôme d'État reconnu." },
-        { q: "La durée de validité du TFP APS est de :", opts: ["1 an", "2 ans", "3 ans", "5 ans"], correct: [2], sol: "3 ans." },
-        { q: "L'agent APS peut exercer dans :", opts: ["Les ERP", "Les IGH", "Les commerces", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Dans tous ces établissements." },
-        { q: "Le registre de sécurité est :", opts: ["Obligatoire", "Optionnel", "Recommandé", "Interdit"], correct: [0], sol: "Obligatoire." },
-        { q: "La formation TFP APS dure :", opts: ["35h", "70h", "140h", "210h"], correct: [1], sol: "70 heures." },
-        { q: "L'habilitation est délivrée par :", opts: ["Le préfet", "Le SDIS", "L'employeur", "La région"], correct: [0], sol: "Par le préfet." },
-        { q: "Un ERP de catégorie 1 accueille :", opts: ["+ de 1500 personnes", "+ de 300 personnes", "+ de 700 personnes", "+ de 5000 personnes"], correct: [0], sol: "Plus de 1500 personnes." },
-        { q: "La consigne de sécurité doit être :", opts: ["Affichée", "Distribuée", "Lue", "Optionnelle"], correct: [0], sol: "Affichée." },
-        { q: "Le permis de feu est nécessaire pour :", opts: ["Travaux par points chauds", "Utilisation d'extincteur", "Évacuation", "Ronde"], correct: [0], sol: "Pour tout travail générant des étincelles." },
-        { q: "La commission de sécurité visite :", opts: ["Les ERP", "Les habitations", "Les bureaux", "Les commerces"], correct: [0], sol: "Les ERP." },
-        { q: "La responsabilité de l'agent APS est :", opts: ["Pénale", "Civile", "Pénale et civile", "Aucune"], correct: [2], sol: "Pénale et civile." },
-        { q: "La formation continue est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Inutile"], correct: [0], sol: "Obligatoire." },
-        { q: "Les ERP sont classés en :", opts: ["5 catégories", "4 catégories", "6 catégories", "3 catégories"], correct: [0], sol: "5 catégories." },
-        { q: "La visite de conformité est réalisée par :", opts: ["Le propriétaire", "La commission de sécurité", "L'agent APS", "Les pompiers"], correct: [1], sol: "Par la commission de sécurité." },
-        { q: "Le TFP APS est reconnu par :", opts: ["L'État", "La région", "Le département", "La commune"], correct: [0], sol: "Reconnu par l'État." },
-        { q: "L'obligation de formation est :", opts: ["Légale", "Contractuelle", "Optionnelle", "Recommandée"], correct: [0], sol: "Une obligation légale." },
-        { q: "Le plan d'évacuation est :", opts: ["Obligatoire", "Optionnel", "Recommandé", "Interdit"], correct: [0], sol: "Obligatoire dans les ERP." },
-        { q: "L'agent APS travaille sous l'autorité :", opts: ["Du chef de service", "Du directeur", "Du propriétaire", "Du maire"], correct: [0], sol: "Du chef de service sécurité." },
-        { q: "La réserve opérationnelle concerne :", opts: ["Les pompiers", "Les agents APS", "Les bénévoles", "Les militaires"], correct: [0], sol: "Les sapeurs-pompiers." },
-        { q: "Le recyclage TFP APS dure :", opts: ["35h", "70h", "21h", "14h"], correct: [0], sol: "35 heures." },
+
+      // ===== TFP APS - UV 2 JURIDIQUE =====
+      tfpaps_uv2_juridique: [
+        { id: 'tj1', q: "Le TFP APS est un diplôme :", opts: ["D'État", "Privé", "Reconnu", "Optionnel"], correct: [0], sol: "Diplôme d'État reconnu." },
+        { id: 'tj2', q: "La durée de validité du TFP APS est de :", opts: ["1 an", "2 ans", "3 ans", "5 ans"], correct: [2], sol: "3 ans." },
+        { id: 'tj3', q: "L'agent APS peut exercer dans :", opts: ["Les ERP", "Les IGH", "Les commerces", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Dans tous ces établissements." },
+        { id: 'tj4', q: "Le registre de sécurité est :", opts: ["Obligatoire", "Optionnel", "Recommandé", "Interdit"], correct: [0], sol: "Obligatoire." },
+        { id: 'tj5', q: "La formation TFP APS dure :", opts: ["35h", "70h", "140h", "210h"], correct: [1], sol: "70 heures." },
+        { id: 'tj6', q: "L'habilitation est délivrée par :", opts: ["Le préfet", "Le SDIS", "L'employeur", "La région"], correct: [0], sol: "Par le préfet." },
+        { id: 'tj7', q: "Un ERP de catégorie 1 accueille :", opts: ["+ de 1500 personnes", "+ de 300 personnes", "+ de 700 personnes", "+ de 5000 personnes"], correct: [0], sol: "Plus de 1500 personnes." },
+        { id: 'tj8', q: "La consigne de sécurité doit être :", opts: ["Affichée", "Distribuée", "Lue", "Optionnelle"], correct: [0], sol: "Affichée." },
+        { id: 'tj9', q: "Le permis de feu est nécessaire pour :", opts: ["Travaux par points chauds", "Utilisation d'extincteur", "Évacuation", "Ronde"], correct: [0], sol: "Pour tout travail générant des étincelles." },
+        { id: 'tj10', q: "La commission de sécurité visite :", opts: ["Les ERP", "Les habitations", "Les bureaux", "Les commerces"], correct: [0], sol: "Les ERP." },
+        { id: 'tj11', q: "La responsabilité de l'agent APS est :", opts: ["Pénale", "Civile", "Pénale et civile", "Aucune"], correct: [2], sol: "Pénale et civile." },
+        { id: 'tj12', q: "La formation continue est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Inutile"], correct: [0], sol: "Obligatoire." },
+        { id: 'tj13', q: "Les ERP sont classés en :", opts: ["5 catégories", "4 catégories", "6 catégories", "3 catégories"], correct: [0], sol: "5 catégories." },
+        { id: 'tj14', q: "La visite de conformité est réalisée par :", opts: ["Le propriétaire", "La commission de sécurité", "L'agent APS", "Les pompiers"], correct: [1], sol: "Par la commission de sécurité." },
+        { id: 'tj15', q: "Le TFP APS est reconnu par :", opts: ["L'État", "La région", "Le département", "La commune"], correct: [0], sol: "Reconnu par l'État." },
+        { id: 'tj16', q: "L'obligation de formation est :", opts: ["Légale", "Contractuelle", "Optionnelle", "Recommandée"], correct: [0], sol: "Une obligation légale." },
+        { id: 'tj17', q: "Le plan d'évacuation est :", opts: ["Obligatoire", "Optionnel", "Recommandé", "Interdit"], correct: [0], sol: "Obligatoire dans les ERP." },
+        { id: 'tj18', q: "L'agent APS travaille sous l'autorité :", opts: ["Du chef de service", "Du directeur", "Du propriétaire", "Du maire"], correct: [0], sol: "Du chef de service sécurité." },
+        { id: 'tj19', q: "La réserve opérationnelle concerne :", opts: ["Les pompiers", "Les agents APS", "Les bénévoles", "Les militaires"], correct: [0], sol: "Les sapeurs-pompiers." },
+        { id: 'tj20', q: "Le recyclage TFP APS dure :", opts: ["35h", "70h", "21h", "14h"], correct: [0], sol: "35 heures." },
+        { id: 'tj21', q: "La durée de conservation du registre est :", opts: ["1 an", "3 ans", "5 ans", "10 ans"], correct: [2], sol: "5 ans." },
+        { id: 'tj22', q: "Le chef de service APS doit avoir :", opts: ["SSIAP 1", "TFP APS", "CQP APS", "Aucun"], correct: [1], sol: "TFP APS." },
+        { id: 'tj23', q: "La formation initiale est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Inutile"], correct: [0], sol: "Obligatoire." },
+        { id: 'tj24', q: "L'agent APS doit être :", opts: ["Majeur", "Mineur", "Sans âge", "Aucun"], correct: [0], sol: "Majeur." },
+        { id: 'tj25', q: "La carte professionnelle est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Interdite"], correct: [0], sol: "Obligatoire." },
       ],
-      tfpaps_technique: [
-        { q: "Un extincteur à eau pulvérisée est de couleur :", opts: ["Rouge", "Vert", "Jaune", "Bleu"], correct: [0], sol: "Rouge." },
-        { q: "Un extincteur à CO2 est utilisé pour :", opts: ["Feux gras", "Feux électriques", "Feux de bois", "Feux de métaux"], correct: [1], sol: "Pour les feux électriques." },
-        { q: "La pression d'un extincteur à poudre est :", opts: ["Basse", "Moyenne", "Haute", "Variable"], correct: [0], sol: "Basse pression." },
-        { q: "Le RIA est :", opts: ["Un extincteur", "Une colonne sèche", "Une bouche d'incendie", "Un système d'extinction"], correct: [1], sol: "Une colonne sèche." },
-        { q: "La vérification des extincteurs est :", opts: ["Mensuelle", "Annuelle", "Quotidienne", "Hebdomadaire"], correct: [0], sol: "Mensuelle." },
-        { q: "Le détecteur de fumée optique détecte :", opts: ["La chaleur", "La fumée", "Le CO", "Le gaz"], correct: [1], sol: "Détecte les particules de fumée." },
-        { q: "Le système d'alarme doit être :", opts: ["Audible", "Visuel", "Audible et visuel", "Silencieux"], correct: [2], sol: "Audible et visuel." },
-        { q: "La colonne sèche permet :", opts: ["L'extinction", "L'évacuation", "L'alerte", "L'éclairage"], correct: [0], sol: "L'extinction." },
-        { q: "Un extincteur à poudre ABC est polyvalent pour :", opts: ["Bois, liquides, gaz", "Électrique", "Métaux", "Graisses"], correct: [0], sol: "Feux de classes A, B et C." },
-        { q: "La centrale de détection incendie :", opts: ["Détecte", "Alarme", "Transmet", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces fonctions." },
-        { q: "Les blocs autonomes d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
-        { q: "La sirène d'alarme doit être :", opts: ["Différenciée", "Unique", "Optionnelle", "Silencieuse"], correct: [0], sol: "Différenciée." },
-        { q: "Le boîtier d'appel d'urgence est :", opts: ["Rouge", "Jaune", "Vert", "Bleu"], correct: [0], sol: "Rouge." },
-        { q: "La gaine technique doit être :", opts: ["Étanche", "Coupe-feu", "Ventilée", "Éclairée"], correct: [1], sol: "Coupe-feu." },
-        { q: "L'extincteur à mousse est utilisé pour :", opts: ["Feux de bois", "Feux de liquides", "Feux électriques", "Feux de métaux"], correct: [1], sol: "Pour les feux de liquides." },
+
+      // ===== TFP APS - UV 3 GESTION DES CONFLITS =====
+      tfpaps_uv3_conflits: [
+        { id: 'tc1', q: "La gestion de conflit passe par :", opts: ["Le dialogue", "La désescalade", "La force", "Tout ce qui précède"], correct: [0, 1], sol: "Dialogue et désescalade." },
+        { id: 'tc2', q: "L'agent APS doit :", opts: ["Rester calme", "Écouter", "Menacer", "Tout ce qui précède"], correct: [0, 1], sol: "Rester calme et écouter." },
+        { id: 'tc3', q: "Face à une personne agressive, l'agent doit :", opts: ["Parler fort", "Garder ses distances", "Céder", "Appeler les secours"], correct: [1, 3], sol: "Garder ses distances et appeler les secours." },
+        { id: 'tc4', q: "La communication non verbale inclut :", opts: ["Le regard", "La posture", "La voix", "Tout ce qui précède"], correct: [0, 1], sol: "Le regard et la posture." },
+        { id: 'tc5', q: "Le conflit peut être :", opts: ["Verbal", "Physique", "Psychologique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces formes." },
+        { id: 'tc6', q: "La médiation consiste à :", opts: ["Trancher", "Faciliter le dialogue", "Imposer une solution", "Ignorer"], correct: [1], sol: "Faciliter le dialogue." },
+        { id: 'tc7', q: "L'agent APS doit :", opts: ["Être impartial", "Prendre parti", "Ignorer", "Tout ce qui précède"], correct: [0], sol: "Être impartial." },
+        { id: 'tc8', q: "La prévention des conflits passe par :", opts: ["L'information", "La formation", "La sensibilisation", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Information, formation et sensibilisation." },
+        { id: 'tc9', q: "En cas de conflit, il faut :", opts: ["Isoler les protagonistes", "Appeler les renforts", "Fuir", "Tout ce qui précède"], correct: [0, 1], sol: "Isoler et appeler les renforts." },
+        { id: 'tc10', q: "L'agent doit :", opts: ["Maîtriser ses émotions", "Exprimer ses émotions", "Ignorer", "Tout ce qui précède"], correct: [0], sol: "Maîtriser ses émotions." },
+        { id: 'tc11', q: "La désescalade consiste à :", opts: ["Calmer", "Accélérer", "Ignorer", "Tout ce qui précède"], correct: [0], sol: "Calmer la situation." },
+        { id: 'tc12', q: "L'agent APS doit :", opts: ["Respecter la personne", "Respecter la procédure", "Respecter la loi", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Respecter la personne, la procédure et la loi." },
+        { id: 'tc13', q: "Face à une foule, l'agent doit :", opts: ["Rester calme", "Crier", "Utiliser la force", "Tout ce qui précède"], correct: [0], sol: "Rester calme." },
+        { id: 'tc14', q: "La communication en conflit doit être :", opts: ["Claire", "Précise", "Calme", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Claire, précise et calme." },
+        { id: 'tc15', q: "L'agent doit signaler :", opts: ["Le conflit", "Les dégradations", "Les blessés", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
+        { id: 'tc16', q: "La gestion des foules est :", opts: ["Stratégique", "Tactique", "Opérationnelle", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Stratégique, tactique et opérationnelle." },
+        { id: 'tc17', q: "L'agent doit :", opts: ["Anticiper", "Prévenir", "Intervenir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Anticiper, prévenir et intervenir." },
+        { id: 'tc18', q: "La négociation est :", opts: ["Un outil", "Une méthode", "Une technique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Outil, méthode et technique." },
+        { id: 'tc19', q: "L'agent doit :", opts: ["Savoir écouter", "Savoir parler", "Savoir agir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Écouter, parler et agir." },
+        { id: 'tc20', q: "La gestion des conflits est :", opts: ["Une compétence", "Un savoir-faire", "Un art", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Compétence, savoir-faire et art." },
       ],
-      tfpaps_securite: [
-        { q: "La mission principale de l'agent APS est :", opts: ["Prévenir les risques", "Secourir", "Accueillir", "Maintenir"], correct: [0], sol: "Prévenir les risques." },
-        { q: "L'agent APS doit réaliser :", opts: ["Des rondes", "Des contrôles", "Des interventions", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces missions." },
-        { q: "La prévention passe par :", opts: ["L'information", "La formation", "La sensibilisation", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "L'agent APS gère :", opts: ["Les conflits", "Les intrusions", "Les accidents", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces situations." },
-        { q: "La ronde de sécurité a pour but :", opts: ["Détecter les anomalies", "Compter les personnes", "Nettoyer", "Surveiller"], correct: [0], sol: "Détecter les anomalies." },
-        { q: "L'agent APS doit connaître :", opts: ["Le plan des locaux", "Les consignes", "Les numéros d'urgence", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "La tenue de l'agent APS est :", opts: ["Réglementaire", "Optionnelle", "Libre", "Aucune"], correct: [0], sol: "Réglementaire." },
-        { q: "L'agent APS travaille :", opts: ["En équipe", "Seul", "En équipe ou seul", "Aucun"], correct: [0, 1], sol: "En équipe ou seul." },
-        { q: "La surveillance peut être :", opts: ["Fixé", "Mobile", "Fixé ou mobile", "Aucun"], correct: [0, 1], sol: "Fixé ou mobile." },
-        { q: "L'agent doit signaler :", opts: ["Les dégradations", "Les incendies", "Les accidents", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "La gestion des accès inclut :", opts: ["Le contrôle", "L'enregistrement", "Le filtrage", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "L'agent APS doit être :", opts: ["Diplômé", "Certifié", "Diplômé et certifié", "Aucun"], correct: [0, 1], sol: "Diplômé et certifié." },
-        { q: "L'agent APS est habilité à :", opts: ["Intervenir", "Alimenter", "Informer", "Tout ce qui précède"], correct: [0, 2], sol: "Intervenir et informer." },
-        { q: "Le rapport d'activité est :", opts: ["Obligatoire", "Optionnel", "Recommandé", "Interdit"], correct: [0], sol: "Obligatoire." },
-        { q: "L'agent APS utilise :", opts: ["Une radio", "Un téléphone", "Un badge", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "La prévention des vols est :", opts: ["Une mission", "Une option", "Une suggestion", "Aucune"], correct: [0], sol: "Une mission." },
-        { q: "L'agent APS est formé à :", opts: ["La sécurité incendie", "La sécurité des biens", "La sécurité des personnes", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "Le contrôle des accès est :", opts: ["Physique", "Électronique", "Physique ou électronique", "Aucun"], correct: [0, 1], sol: "Physique ou électronique." },
-        { q: "L'agent doit respecter :", opts: ["La confidentialité", "La discrétion", "Le secret professionnel", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
-        { q: "La collaboration avec les forces de l'ordre est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Interdite"], correct: [0], sol: "Obligatoire." },
+
+      // ===== TFP APS - UV 4 MODULE STRATÉGIQUE =====
+      tfpaps_uv4_strategique: [
+        { id: 'ts1', q: "Le module stratégique traite de :", opts: ["La planification", "L'organisation", "La coordination", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Planification, organisation et coordination." },
+        { id: 'ts2', q: "La stratégie de sécurité inclut :", opts: ["La prévention", "La protection", "L'intervention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévention, protection et intervention." },
+        { id: 'ts3', q: "L'analyse des risques permet :", opts: ["Identifier les menaces", "Évaluer les vulnérabilités", "Définir les priorités", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Identifier, évaluer et prioriser." },
+        { id: 'ts4', q: "Le plan de sécurité doit être :", opts: ["Écrit", "Connu", "Appliqué", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Écrit, connu et appliqué." },
+        { id: 'ts5', q: "La gestion de crise passe par :", opts: ["L'anticipation", "La réaction", "La communication", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Anticipation, réaction et communication." },
+        { id: 'ts6', q: "Le retour d'expérience permet :", opts: ["Améliorer", "Corriger", "Former", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Améliorer, corriger et former." },
+        { id: 'ts7', q: "La stratégie doit être :", opts: ["Adaptable", "Rigide", "Immuable", "Aucun"], correct: [0], sol: "Adaptable." },
+        { id: 'ts8', q: "Le commandement en sécurité :", opts: ["Organise", "Dirige", "Contrôle", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Organise, dirige et contrôle." },
+        { id: 'ts9', q: "La coordination est :", opts: ["Essentielle", "Optionnelle", "Secondaire", "Aucun"], correct: [0], sol: "Essentielle." },
+        { id: 'ts10', q: "Le plan d'action doit être :", opts: ["Précis", "Mesurable", "Réalisable", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Précis, mesurable et réalisable." },
+        { id: 'ts11', q: "La stratégie de sécurité :", opts: ["Prévient", "Protège", "Intervient", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévient, protège et intervient." },
+        { id: 'ts12', q: "L'évaluation des risques est :", opts: ["Continue", "Périodique", "Aléatoire", "Aucun"], correct: [0], sol: "Continue." },
+        { id: 'ts13', q: "Le dispositif de sécurité doit être :", opts: ["Efficace", "Adapté", "Évolutif", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Efficace, adapté et évolutif." },
+        { id: 'ts14', q: "La communication en stratégie est :", opts: ["Verticale", "Horizontale", "Descendante", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Toutes ces formes." },
+        { id: 'ts15', q: "Le bilan de sécurité permet :", opts: ["Évaluer", "Corriger", "Améliorer", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Évaluer, corriger et améliorer." },
+        { id: 'ts16', q: "La veille stratégique est :", opts: ["Continue", "Périodique", "Aléatoire", "Aucun"], correct: [0], sol: "Continue." },
+        { id: 'ts17', q: "L'analyse SWOT est :", opts: ["Un outil", "Une méthode", "Une technique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Outil, méthode et technique." },
+        { id: 'ts18', q: "La planification est :", opts: ["Stratégique", "Tactique", "Opérationnelle", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Stratégique, tactique et opérationnelle." },
+        { id: 'ts19', q: "Le management de la sécurité est :", opts: ["Global", "Intégré", "Systémique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Global, intégré et systémique." },
+        { id: 'ts20', q: "La culture de sécurité est :", opts: ["Essentielle", "Partagée", "Évolutive", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Essentielle, partagée et évolutive." },
       ],
-      tfpaps_incendie: [
-        { q: "En cas d'incendie, l'agent APS doit :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: [0, 1], sol: "Évacuer et alerter." },
-        { q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: [0, 1], sol: "Affiché et connu." },
-        { q: "L'extincteur à poudre est :", opts: ["Polyvalent", "Spécialisé", "Universel", "Aucun"], correct: [0], sol: "Polyvalent." },
-        { q: "La classe de feu B concerne :", opts: ["Les liquides", "Les solides", "Les gaz", "Les métaux"], correct: [0], sol: "Les liquides." },
-        { q: "Le RIA est utilisé par :", opts: ["Les pompiers", "Les agents SSIAP", "Les pompiers et agents", "Le public"], correct: [0, 1], sol: "Les pompiers et les agents." },
-        { q: "La colonne sèche est :", opts: ["Non alimentée", "Alimentée", "Optionnelle", "Interdite"], correct: [0], sol: "Non alimentée." },
-        { q: "Le système de détection est :", opts: ["Automatique", "Manuel", "Automatique ou manuel", "Aucun"], correct: [0, 1], sol: "Automatique ou manuel." },
-        { q: "L'évacuation doit être :", opts: ["Rapide", "Ordonnée", "Rapide et ordonnée", "Lente"], correct: [0, 1], sol: "Rapide et ordonnée." },
-        { q: "Le désenfumage permet :", opts: ["L'évacuation", "La visibilité", "L'évacuation et la visibilité", "L'extinction"], correct: [0, 1], sol: "L'évacuation et la visibilité." },
-        { q: "Les exutoires de fumée sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
-        { q: "La sirène d'alarme est :", opts: ["Audible", "Visuelle", "Audible et visuelle", "Silencieuse"], correct: [0, 1], sol: "Audible et visuelle." },
-        { q: "Le déclencheur manuel est :", opts: ["Rouge", "Jaune", "Vert", "Bleu"], correct: [0], sol: "Rouge." },
-        { q: "La distance maximale vers un RIA est :", opts: ["30m", "50m", "20m", "40m"], correct: [0], sol: "30 mètres." },
-        { q: "L'extincteur à CO2 est utilisé pour :", opts: ["Classe A", "Classe B", "Classe E", "Classe D"], correct: [2], sol: "Classe E." },
-        { q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
+
+      // ===== TFP APS - UV 5 INCENDIE =====
+      tfpaps_uv5_incendie: [
+        { id: 'ti1', q: "En cas d'incendie, l'agent APS doit :", opts: ["Évacuer", "Alerter", "Évacuer et alerter", "Combattre le feu"], correct: [0, 1], sol: "Évacuer et alerter." },
+        { id: 'ti2', q: "Le plan d'évacuation doit être :", opts: ["Affiché", "Connu", "Affiché et connu", "Optionnel"], correct: [0, 1], sol: "Affiché et connu." },
+        { id: 'ti3', q: "L'extincteur à poudre est :", opts: ["Polyvalent", "Spécialisé", "Universel", "Aucun"], correct: [0], sol: "Polyvalent." },
+        { id: 'ti4', q: "La classe de feu B concerne :", opts: ["Les liquides", "Les solides", "Les gaz", "Les métaux"], correct: [0], sol: "Les liquides." },
+        { id: 'ti5', q: "Le RIA est utilisé par :", opts: ["Les pompiers", "Les agents SSIAP", "Les pompiers et agents", "Le public"], correct: [0, 1], sol: "Les pompiers et les agents." },
+        { id: 'ti6', q: "La colonne sèche est :", opts: ["Non alimentée", "Alimentée", "Optionnelle", "Interdite"], correct: [0], sol: "Non alimentée." },
+        { id: 'ti7', q: "Le système de détection est :", opts: ["Automatique", "Manuel", "Automatique ou manuel", "Aucun"], correct: [0, 1], sol: "Automatique ou manuel." },
+        { id: 'ti8', q: "L'évacuation doit être :", opts: ["Rapide", "Ordonnée", "Rapide et ordonnée", "Lente"], correct: [0, 1], sol: "Rapide et ordonnée." },
+        { id: 'ti9', q: "Le désenfumage permet :", opts: ["L'évacuation", "La visibilité", "L'évacuation et la visibilité", "L'extinction"], correct: [0, 1], sol: "L'évacuation et la visibilité." },
+        { id: 'ti10', q: "Les exutoires de fumée sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
+        { id: 'ti11', q: "La sirène d'alarme est :", opts: ["Audible", "Visuelle", "Audible et visuelle", "Silencieuse"], correct: [0, 1], sol: "Audible et visuelle." },
+        { id: 'ti12', q: "Le déclencheur manuel est :", opts: ["Rouge", "Jaune", "Vert", "Bleu"], correct: [0], sol: "Rouge." },
+        { id: 'ti13', q: "La distance maximale vers un RIA est :", opts: ["30m", "50m", "20m", "40m"], correct: [0], sol: "30 mètres." },
+        { id: 'ti14', q: "L'extincteur à CO2 est utilisé pour :", opts: ["Classe A", "Classe B", "Classe E", "Classe D"], correct: [2], sol: "Classe E." },
+        { id: 'ti15', q: "Les blocs d'éclairage sont :", opts: ["Obligatoires", "Optionnels", "Recommandés", "Interdits"], correct: [0], sol: "Obligatoires." },
+        { id: 'ti16', q: "La colonne humide est :", opts: ["Alimentée", "Non alimentée", "Optionnelle", "Interdite"], correct: [0], sol: "Alimentée." },
+        { id: 'ti17', q: "Le temps d'évacuation est de :", opts: ["5 min", "3 min", "8 min", "10 min"], correct: [0], sol: "5 minutes." },
+        { id: 'ti18', q: "La centrale incendie transmet :", opts: ["L'alarme", "L'extinction", "L'évacuation", "Tout ce qui précède"], correct: [0], sol: "L'alarme." },
+        { id: 'ti19', q: "La porte coupe-feu est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Interdite"], correct: [0], sol: "Obligatoire." },
+        { id: 'ti20', q: "L'extincteur à mousse est utilisé pour :", opts: ["Classe A", "Classe B", "Classe C", "Classe D"], correct: [1], sol: "Classe B (liquides)." },
       ],
-      tfpaps_secours: [
-        { q: "En cas d'obstruction des voies aériennes, l'action prioritaire est :", opts: ["Heimlich", "Respirations", "PLS", "Appel"], correct: [0], sol: "La manœuvre de Heimlich." },
-        { q: "La PLS est pour :", opts: ["Conscient", "Inconscient qui respire", "Arrêt cardiaque", "Hémorragie"], correct: [1], sol: "Inconscient qui respire." },
-        { q: "Le massage cardiaque se fait :", opts: ["Au centre du thorax", "À gauche", "À droite", "Sur le ventre"], correct: [0], sol: "Au centre du thorax." },
-        { q: "La compression thoracique est de :", opts: ["5-6 cm", "2-3 cm", "10 cm", "1 cm"], correct: [0], sol: "5 à 6 cm." },
-        { q: "Le rythme du massage est de :", opts: ["100-120/min", "60/min", "80/min", "140/min"], correct: [0], sol: "100 à 120/min." },
-        { q: "Le défibrillateur est utilisé :", opts: ["En cas de FV", "En cas d'asphyxie", "En cas de malaise", "En cas d'hémorragie"], correct: [0], sol: "En cas de FV." },
-        { q: "Le point de compression en cas d'hémorragie est :", opts: ["Au-dessus de la plaie", "En dessous", "Sur la plaie", "À côté"], correct: [0], sol: "Au-dessus." },
-        { q: "Le garrot est utilisé en dernier recours :", opts: ["Pour une hémorragie", "Pour une fracture", "Pour une brûlure", "Pour un malaise"], correct: [0], sol: "Pour une hémorragie grave." },
-        { q: "La position latérale de sécurité est aussi appelée :", opts: ["PLS", "PLA", "PPS", "PSS"], correct: [0], sol: "PLS." },
-        { q: "Le numéro d'urgence européen est :", opts: ["112", "15", "18", "17"], correct: [0], sol: "Le 112." },
-        { q: "Le SAMU est joignable au :", opts: ["15", "18", "17", "112"], correct: [0], sol: "15." },
-        { q: "Les pompiers sont joignables au :", opts: ["18", "15", "17", "112"], correct: [0], sol: "18." },
-        { q: "La police est joignable au :", opts: ["17", "15", "18", "112"], correct: [0], sol: "17." },
-        { q: "La victime doit être :", opts: ["Rassurée", "Ignorée", "Déplacée", "Secouée"], correct: [0], sol: "Rassurée." },
-        { q: "Le bilan de l'état de la victime est :", opts: ["Primaire", "Secondaire", "Primaire et secondaire", "Aucun"], correct: [0, 1], sol: "Primaire et secondaire." },
+
+      // ===== TFP APS - UV 6 ART. 73 CPP =====
+      tfpaps_uv6_cpp: [
+        { id: 'tcpp1', q: "L'article 73 du CPP autorise :", opts: ["L'interpellation", "La fouille", "La garde à vue", "Tout ce qui précède"], correct: [0], sol: "L'interpellation." },
+        { id: 'tcpp2', q: "L'agent APS peut interpeller en cas de :", opts: ["Crime flagrant", "Délit flagrant", "Simple soupçon", "Aucun"], correct: [0, 1], sol: "Crime ou délit flagrant." },
+        { id: 'tcpp3', q: "La remise à l'autorité judiciaire doit se faire :", opts: ["Immédiatement", "Dans les 24h", "Dans les 48h", "Aucun"], correct: [0], sol: "Immédiatement." },
+        { id: 'tcpp4', q: "L'agent APS doit :", opts: ["Constater", "Interpeller", "Remettre", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Constater, interpeller et remettre." },
+        { id: 'tcpp5', q: "L'article 73 CPP s'applique :", opts: ["Aux agents APS", "Aux policiers", "Aux pompiers", "Aucun"], correct: [0], sol: "Aux agents APS." },
+        { id: 'tcpp6', q: "Le flagrant délit doit être :", opts: ["Visible", "Prouvé", "Présumé", "Aucun"], correct: [0], sol: "Visible." },
+        { id: 'tcpp7', q: "L'agent APS peut :", opts: ["Fouiller", "Palper", "Appréhender", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Fouiller, palper et appréhender." },
+        { id: 'tcpp8', q: "La garde à vue est :", opts: ["Judiciaire", "Administrative", "Privée", "Aucun"], correct: [0], sol: "Judiciaire." },
+        { id: 'tcpp9', q: "L'agent APS doit :", opts: ["Informer", "Protéger", "Secourir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Informer, protéger et secourir." },
+        { id: 'tcpp10', q: "Le motif d'interpellation doit être :", opts: ["Légitime", "Suffisant", "Légal", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Légitime, suffisant et légal." },
+        { id: 'tcpp11', q: "La procédure pénale est :", opts: ["Écrite", "Orale", "Mixte", "Aucun"], correct: [0], sol: "Écrite." },
+        { id: 'tcpp12', q: "L'agent APS doit :", opts: ["Signaler", "Rapporter", "Témoigner", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Signaler, rapporter et témoigner." },
+        { id: 'tcpp13', q: "La privation de liberté est :", opts: ["Réglementée", "Encadrée", "Contrôlée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réglementée, encadrée et contrôlée." },
+        { id: 'tcpp14', q: "L'agent APS doit :", opts: ["Respecter les droits", "Respecter la procédure", "Respecter la loi", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Respecter les droits, la procédure et la loi." },
+        { id: 'tcpp15', q: "Le contrôle d'identité est :", opts: ["Légal", "Encadré", "Justifié", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Légal, encadré et justifié." },
+      ],
+
+      // ===== TFP APS - UV 7 TERRORISME =====
+      tfpaps_uv7_terrorisme: [
+        { id: 'tter1', q: "Le plan Vigipirate est :", opts: ["Un plan de sécurité", "Un plan d'urgence", "Un plan de prévention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Plan de sécurité, d'urgence et de prévention." },
+        { id: 'tter2', q: "L'agent APS doit repérer :", opts: ["Les comportements suspects", "Les objets abandonnés", "Les intrusions", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Tout ce qui précède." },
+        { id: 'tter3', q: "Le risque terroriste est :", opts: ["Élevé", "Modéré", "Faible", "Variable"], correct: [0], sol: "Élevé." },
+        { id: 'tter4', q: "La procédure en cas d'attaque est :", opts: ["Évacuer", "Confiner", "Alerter", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Évacuer, confiner et alerter." },
+        { id: 'tter5', q: "Le plan de réponse inclut :", opts: ["L'évacuation", "Le confinement", "L'intervention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Évacuation, confinement et intervention." },
+        { id: 'tter6', q: "L'agent APS doit :", opts: ["Être vigilant", "Être formé", "Être préparé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Vigilant, formé et préparé." },
+        { id: 'tter7', q: "La menace terroriste peut être :", opts: ["Interne", "Externe", "Interne ou externe", "Aucun"], correct: [2], sol: "Interne ou externe." },
+        { id: 'tter8', q: "Le signalement doit être :", opts: ["Rapide", "Précis", "Complet", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Rapide, précis et complet." },
+        { id: 'tter9', q: "L'agent APS doit :", opts: ["Protéger les personnes", "Protéger les biens", "Protéger les valeurs", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Protéger les personnes, les biens et les valeurs." },
+        { id: 'tter10', q: "Le risque terroriste nécessite :", opts: ["Une vigilance accrue", "Une formation spécifique", "Des moyens adaptés", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Vigilance, formation et moyens." },
+        { id: 'tter11', q: "L'agent APS doit :", opts: ["Savoir réagir", "Savoir alerter", "Savoir protéger", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réagir, alerter et protéger." },
+        { id: 'tter12', q: "La sécurité anti-terroriste est :", opts: ["Globale", "Spécifique", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Globale, spécifique et adaptée." },
+        { id: 'tter13', q: "Le PPMS est :", opts: ["Un plan", "Une procédure", "Un outil", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Plan, procédure et outil." },
+        { id: 'tter14', q: "L'agent APS doit :", opts: ["Connaître le plan", "Connaître les procédures", "Connaître les numéros", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Connaître le plan, les procédures et les numéros." },
+        { id: 'tter15', q: "La gestion du risque terroriste est :", opts: ["Continue", "Périodique", "Aléatoire", "Aucun"], correct: [0], sol: "Continue." },
+      ],
+
+      // ===== TFP APS - UV 8 PROFESSIONNEL =====
+      tfpaps_uv8_professionnel: [
+        { id: 'tpro1', q: "L'agent APS doit :", opts: ["Être professionnel", "Être ponctuel", "Être courtois", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Professionnel, ponctuel et courtois." },
+        { id: 'tpro2', q: "La tenue de l'agent APS est :", opts: ["Réglementaire", "Propre", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réglementaire, propre et adaptée." },
+        { id: 'tpro3', q: "L'agent APS doit :", opts: ["Connaître son métier", "Connaître la réglementation", "Connaître les procédures", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Connaître son métier, la réglementation et les procédures." },
+        { id: 'tpro4', q: "Le professionnalisme inclut :", opts: ["La discrétion", "La loyauté", "Le respect", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Discrétion, loyauté et respect." },
+        { id: 'tpro5', q: "L'agent APS doit :", opts: ["Être vigilant", "Être réactif", "Être proactif", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Vigilant, réactif et proactif." },
+        { id: 'tpro6', q: "La relation avec le public doit être :", opts: ["Professionnelle", "Courtoise", "Respectueuse", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Professionnelle, courtoise et respectueuse." },
+        { id: 'tpro7', q: "L'agent APS doit :", opts: ["Rendre compte", "Signaler", "Transmettre", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Rendre compte, signaler et transmettre." },
+        { id: 'tpro8', q: "Le travail en équipe est :", opts: ["Essentiel", "Optionnel", "Secondaire", "Aucun"], correct: [0], sol: "Essentiel." },
+        { id: 'tpro9', q: "L'agent APS doit :", opts: ["Savoir communiquer", "Savoir écouter", "Savoir s'adapter", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Communiquer, écouter et s'adapter." },
+        { id: 'tpro10', q: "Le métier d'agent APS est :", opts: ["De prévention", "De protection", "De sécurité", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévention, protection et sécurité." },
+        { id: 'tpro11', q: "L'agent APS doit :", opts: ["Être disponible", "Être fiable", "Être intègre", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Disponible, fiable et intègre." },
+        { id: 'tpro12', q: "La formation continue est :", opts: ["Obligatoire", "Optionnelle", "Recommandée", "Aucun"], correct: [0], sol: "Obligatoire." },
+        { id: 'tpro13', q: "L'agent APS doit :", opts: ["Se former", "S'informer", "Se perfectionner", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Se former, s'informer et se perfectionner." },
+        { id: 'tpro14', q: "Le professionnalisme est :", opts: ["Une attitude", "Un comportement", "Une éthique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Attitude, comportement et éthique." },
+        { id: 'tpro15', q: "L'agent APS représente :", opts: ["Son employeur", "La sécurité", "La prévention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Son employeur, la sécurité et la prévention." },
+        { id: 'tpro16', q: "L'agent APS doit :", opts: ["Être diplomate", "Être ferme", "Être souple", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Diplomate, ferme et souple." },
+        { id: 'tpro17', q: "La déontologie est :", opts: ["Un code", "Des règles", "Une éthique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Code, règles et éthique." },
+        { id: 'tpro18', q: "L'agent APS doit :", opts: ["Respecter les consignes", "Respecter les procédures", "Respecter la hiérarchie", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Respecter les consignes, les procédures et la hiérarchie." },
+        { id: 'tpro19', q: "Le savoir-être est :", opts: ["Essentiel", "Optionnel", "Secondaire", "Aucun"], correct: [0], sol: "Essentiel." },
+        { id: 'tpro20', q: "L'agent APS est :", opts: ["Un professionnel", "Un spécialiste", "Un expert", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Professionnel, spécialiste et expert." },
+      ],
+
+      // ===== TFP APS - UV 9 PALPATION =====
+      tfpaps_uv9_palpation: [
+        { id: 'tpal1', q: "La palpation de sécurité est :", opts: ["Une fouille", "Un contrôle", "Une vérification", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Fouille, contrôle et vérification." },
+        { id: 'tpal2', q: "La palpation doit être :", opts: ["Respectueuse", "Légale", "Justifiée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Respectueuse, légale et justifiée." },
+        { id: 'tpal3', q: "Le consentement est :", opts: ["Nécessaire", "Optionnel", "Recommandé", "Aucun"], correct: [0], sol: "Nécessaire." },
+        { id: 'tpal4', q: "La palpation est :", opts: ["Systématique", "Aléatoire", "Ciblée", "Aucun"], correct: [2], sol: "Ciblée." },
+        { id: 'tpal5', q: "L'agent APS doit :", opts: ["Expliquer", "Informer", "Rassurer", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Expliquer, informer et rassurer." },
+        { id: 'tpal6', q: "La palpation se fait :", opts: ["Sur la personne", "Sur les vêtements", "Sur les effets personnels", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Sur la personne, les vêtements et les effets." },
+        { id: 'tpal7', q: "La procédure de palpation est :", opts: ["Stricte", "Précise", "Réglementée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Stricte, précise et réglementée." },
+        { id: 'tpal8', q: "L'agent APS doit :", opts: ["Être formé", "Être habilité", "Être autorisé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Formé, habilité et autorisé." },
+        { id: 'tpal9', q: "La palpation peut révéler :", opts: ["Des objets dangereux", "Des armes", "Des substances", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Objets dangereux, armes et substances." },
+        { id: 'tpal10', q: "La découverte d'objet implique :", opts: ["La saisie", "Le signalement", "La remise", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Saisie, signalement et remise." },
+        { id: 'tpal11', q: "La palpation doit être :", opts: ["Respectueuse", "Digne", "Professionnelle", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Respectueuse, digne et professionnelle." },
+        { id: 'tpal12', q: "L'agent doit :", opts: ["S'assurer du consentement", "Expliquer la procédure", "Respecter l'intimité", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Assurer le consentement, expliquer et respecter l'intimité." },
+      ],
+
+      // ===== TFP APS - UV 10 ÉLECTRONIQUE =====
+      tfpaps_uv10_electronique: [
+        { id: 'tele1', q: "Les systèmes électroniques incluent :", opts: ["Les caméras", "Les alarmes", "Les détecteurs", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Caméras, alarmes et détecteurs." },
+        { id: 'tele2', q: "La vidéosurveillance est :", opts: ["Réglementée", "Contrôlée", "Autorisée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réglementée, contrôlée et autorisée." },
+        { id: 'tele3', q: "Le système d'alarme permet :", opts: ["Détecter", "Alerter", "Prévenir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Détecter, alerter et prévenir." },
+        { id: 'tele4', q: "La maintenance des systèmes est :", opts: ["Obligatoire", "Périodique", "Qualifiée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, périodique et qualifiée." },
+        { id: 'tele5', q: "L'enregistrement des données est :", opts: ["Légal", "Encadré", "Contrôlé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Légal, encadré et contrôlé." },
+        { id: 'tele6', q: "L'agent APS doit :", opts: ["Connaître les systèmes", "Utiliser les systèmes", "Contrôler les systèmes", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Connaître, utiliser et contrôler." },
+        { id: 'tele7', q: "Les systèmes électroniques sont :", opts: ["Efficaces", "Fiables", "Adaptés", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Efficaces, fiables et adaptés." },
+        { id: 'tele8', q: "La protection des données est :", opts: ["Obligatoire", "Légale", "Contrôlée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, légale et contrôlée." },
+        { id: 'tele9', q: "Le système de contrôle d'accès est :", opts: ["Électronique", "Automatique", "Sécurisé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Électronique, automatique et sécurisé." },
+        { id: 'tele10', q: "L'agent APS doit :", opts: ["Surveiller", "Analyser", "Réagir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Surveiller, analyser et réagir." },
+        { id: 'tele11', q: "Les systèmes doivent être :", opts: ["Testés", "Vérifiés", "Contrôlés", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Testés, vérifiés et contrôlés." },
+        { id: 'tele12', q: "L'électronique permet :", opts: ["La détection", "La protection", "La prévention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Détection, protection et prévention." },
+        { id: 'tele13', q: "Les caméras doivent être :", opts: ["Visibles", "Signalées", "Contrôlées", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Visibles, signalées et contrôlées." },
+        { id: 'tele14', q: "L'enregistrement vidéo est :", opts: ["Légal", "Encadré", "Limité", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Légal, encadré et limité." },
+        { id: 'tele15', q: "Les systèmes électroniques sont :", opts: ["Des outils", "Des moyens", "Des dispositifs", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Outils, moyens et dispositifs." },
+      ],
+
+      // ===== TFP APS - UV 11 GESTION DES RISQUES =====
+      tfpaps_uv11_risques: [
+        { id: 'tris1', q: "La gestion des risques inclut :", opts: ["L'identification", "L'évaluation", "Le traitement", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Identification, évaluation et traitement." },
+        { id: 'tris2', q: "Le risque peut être :", opts: ["Inherent", "Résiduel", "Acceptable", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Inherent, résiduel et acceptable." },
+        { id: 'tris3', q: "L'analyse des risques est :", opts: ["Continue", "Périodique", "Systématique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Continue, périodique et systématique." },
+        { id: 'tris4', q: "Le traitement du risque inclut :", opts: ["La prévention", "La protection", "L'intervention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévention, protection et intervention." },
+        { id: 'tris5', q: "La cartographie des risques permet :", opts: ["Visualiser", "Prioriser", "Planifier", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Visualiser, prioriser et planifier." },
+        { id: 'tris6', q: "Le risque professionnel est :", opts: ["Identifié", "Évalué", "Prévenu", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Identifié, évalué et prévenu." },
+        { id: 'tris7', q: "La gestion des risques est :", opts: ["Proactive", "Réactive", "Adaptative", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Proactive, réactive et adaptative." },
+        { id: 'tris8', q: "L'agent APS doit :", opts: ["Connaître les risques", "Évaluer les risques", "Prévenir les risques", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Connaître, évaluer et prévenir." },
+        { id: 'tris9', q: "Le plan de prévention est :", opts: ["Obligatoire", "Écrit", "Appliqué", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, écrit et appliqué." },
+        { id: 'tris10', q: "La communication sur les risques est :", opts: ["Essentielle", "Continue", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Essentielle, continue et adaptée." },
+        { id: 'tris11', q: "La formation aux risques est :", opts: ["Obligatoire", "Spécifique", "Régulière", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, spécifique et régulière." },
+        { id: 'tris12', q: "La gestion des risques est :", opts: ["Globale", "Intégrée", "Systémique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Globale, intégrée et systémique." },
+        { id: 'tris13', q: "L'évaluation des risques est :", opts: ["Continue", "Périodique", "Systématique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Continue, périodique et systématique." },
+        { id: 'tris14', q: "Le risque résiduel est :", opts: ["Acceptable", "Contrôlé", "Maîtrisé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Acceptable, contrôlé et maîtrisé." },
+        { id: 'tris15', q: "La gestion des risques est :", opts: ["Une démarche", "Une méthode", "Un processus", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Démarche, méthode et processus." },
+      ],
+
+      // ===== TFP APS - UV 12 ÉVÉNEMENTIEL =====
+      tfpaps_uv12_evenementiel: [
+        { id: 'teve1', q: "La sécurité événementielle inclut :", opts: ["La prévention", "La protection", "L'intervention", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévention, protection et intervention." },
+        { id: 'teve2', q: "Le plan de sécurité événementiel est :", opts: ["Obligatoire", "Adapté", "Validé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, adapté et validé." },
+        { id: 'teve3', q: "L'agent APS doit :", opts: ["Contrôler les accès", "Surveiller les flux", "Gérer les foules", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Contrôler, surveiller et gérer." },
+        { id: 'teve4', q: "La gestion des foules est :", opts: ["Stratégique", "Tactique", "Opérationnelle", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Stratégique, tactique et opérationnelle." },
+        { id: 'teve5', q: "Le risque événementiel est :", opts: ["Multiples", "Variables", "Spécifiques", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Multiples, variables et spécifiques." },
+        { id: 'teve6', q: "La coordination est :", opts: ["Essentielle", "Continue", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Essentielle, continue et adaptée." },
+        { id: 'teve7', q: "Le dispositif de sécurité est :", opts: ["Modulable", "Adaptable", "Évolutif", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Modulable, adaptable et évolutif." },
+        { id: 'teve8', q: "L'agent APS doit :", opts: ["Être visible", "Être disponible", "Être réactif", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Visible, disponible et réactif." },
+        { id: 'teve9', q: "La communication est :", opts: ["Interne", "Externe", "Interne et externe", "Aucun"], correct: [2], sol: "Interne et externe." },
+        { id: 'teve10', q: "Le plan d'urgence est :", opts: ["Préparé", "Testé", "Connu", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Préparé, testé et connu." },
+        { id: 'teve11', q: "L'agent APS doit :", opts: ["Anticiper", "Réagir", "S'adapter", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Anticiper, réagir et s'adapter." },
+        { id: 'teve12', q: "La sécurité événementielle est :", opts: ["Globale", "Spécifique", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Globale, spécifique et adaptée." },
+        { id: 'teve13', q: "Le plan de circulation est :", opts: ["Obligatoire", "Adapté", "Validé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, adapté et validé." },
+        { id: 'teve14', q: "La gestion des flux est :", opts: ["Continue", "Périodique", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Continue, périodique et adaptée." },
+        { id: 'teve15', q: "L'événementiel nécessite :", opts: ["Une préparation", "Une coordination", "Une évaluation", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Préparation, coordination et évaluation." },
+      ],
+
+      // ===== TFP APS - UV 13 CONFLITS DÉGRADÉS =====
+      tfpaps_uv13_conflits_degrades: [
+        { id: 'tcd1', q: "Le conflit dégradé est :", opts: ["Violent", "Aggressif", "Dangereux", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Violent, agressif et dangereux." },
+        { id: 'tcd2', q: "L'agent APS doit :", opts: ["Se protéger", "Protéger les autres", "Appeler des renforts", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Se protéger, protéger et appeler." },
+        { id: 'tcd3', q: "La désescalade est :", opts: ["Prioritaire", "Efficace", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prioritaire, efficace et adaptée." },
+        { id: 'tcd4', q: "L'agent APS doit :", opts: ["Garder son calme", "Maîtriser ses émotions", "Rester professionnel", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Calme, maîtrise et professionnalisme." },
+        { id: 'tcd5', q: "La réponse à un conflit dégradé est :", opts: ["Proportionnée", "Adaptée", "Légale", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Proportionnée, adaptée et légale." },
+        { id: 'tcd6', q: "L'agent doit :", opts: ["Éviter l'escalade", "Prévenir l'escalade", "Gérer l'escalade", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Éviter, prévenir et gérer." },
+        { id: 'tcd7', q: "La protection des personnes est :", opts: ["Prioritaire", "Obligatoire", "Légale", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prioritaire, obligatoire et légale." },
+        { id: 'tcd8', q: "L'agent APS doit :", opts: ["Savoir réagir", "Savoir protéger", "Savoir alerter", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réagir, protéger et alerter." },
+        { id: 'tcd9', q: "La gestion des conflits dégradés est :", opts: ["Spécifique", "Formation", "Expérience", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Spécifique, formation et expérience." },
+        { id: 'tcd10', q: "L'agent APS doit :", opts: ["Être formé", "Être entraîné", "Être préparé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Formé, entraîné et préparé." },
+        { id: 'tcd11', q: "La situation dégradée nécessite :", opts: ["Une réaction rapide", "Une protection efficace", "Une coordination", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Réaction rapide, protection et coordination." },
+        { id: 'tcd12', q: "L'agent doit :", opts: ["Rester en sécurité", "Protéger les victimes", "Appeler les secours", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Rester en sécurité, protéger et appeler." },
+      ],
+
+      // ===== TFP APS - UV 14 INDUSTRIEL =====
+      tfpaps_uv14_industriel: [
+        { id: 'tind1', q: "La sécurité industrielle inclut :", opts: ["La prévention", "La protection", "La maintenance", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prévention, protection et maintenance." },
+        { id: 'tind2', q: "Le risque industriel est :", opts: ["Technologique", "Chimique", "Biologique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Technologique, chimique et biologique." },
+        { id: 'tind3', q: "L'agent APS doit :", opts: ["Connaître les risques", "Évaluer les risques", "Prévenir les risques", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Connaître, évaluer et prévenir." },
+        { id: 'tind4', q: "Le plan de prévention est :", opts: ["Obligatoire", "Adapté", "Validé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoire, adapté et validé." },
+        { id: 'tind5', q: "La gestion des risques industriels est :", opts: ["Continue", "Périodique", "Systématique", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Continue, périodique et systématique." },
+        { id: 'tind6', q: "L'agent APS doit :", opts: ["Surveiller", "Contrôler", "Intervenir", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Surveiller, contrôler et intervenir." },
+        { id: 'tind7', q: "La maintenance est :", opts: ["Préventive", "Curative", "Prédictive", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Préventive, curative et prédictive." },
+        { id: 'tind8', q: "Les EPI sont :", opts: ["Obligatoires", "Adaptés", "Contrôlés", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Obligatoires, adaptés et contrôlés." },
+        { id: 'tind9', q: "L'agent APS doit :", opts: ["Être formé", "Être équipé", "Être informé", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Formé, équipé et informé." },
+        { id: 'tind10', q: "La sécurité industrielle est :", opts: ["Globale", "Spécifique", "Adaptée", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Globale, spécifique et adaptée." },
+        { id: 'tind11', q: "Les risques industriels sont :", opts: ["Identifiés", "Évalués", "Prévenus", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Identifiés, évalués et prévenus." },
+        { id: 'tind12', q: "La sécurité en milieu industriel est :", opts: ["Prioritaire", "Obligatoire", "Légale", "Tout ce qui précède"], correct: [0, 1, 2], sol: "Prioritaire, obligatoire et légale." },
       ],
     };
+
+    // ===== SÉRIES D'EXAMEN (questions spécifiques) =====
+    const EXAM_SERIES = {
+      // SSIAP 1 - Examen Incendie
+      ssiap1_incendie_exam: [
+        'si1', 'si3', 'si5', 'si7', 'si9', 'si11', 'si13', 'si15', 'si17', 'si19',
+        'si2', 'si4', 'si6', 'si8', 'si10'
+      ],
+      // SSIAP 1 - Examen Secours
+      ssiap1_secours_exam: [
+        'ss1', 'ss3', 'ss5', 'ss7', 'ss9', 'ss11', 'ss13', 'ss15', 'ss17', 'ss19',
+        'ss2', 'ss4', 'ss6', 'ss8', 'ss10'
+      ],
+      // TFP APS - Examens par UV
+      tfpaps_uv2_juridique_exam: ['tj1','tj3','tj5','tj7','tj9','tj11','tj13','tj15','tj17','tj19','tj21','tj23','tj25','tj2','tj4','tj6','tj8','tj10','tj12','tj14'],
+      tfpaps_uv3_conflits_exam: ['tc1','tc3','tc5','tc7','tc9','tc11','tc13','tc15','tc17','tc19','tc2','tc4','tc6','tc8','tc10'],
+      tfpaps_uv4_strategique_exam: ['ts1','ts3','ts5','ts7','ts9','ts11','ts13','ts15','ts17','ts19','ts2','ts4','ts6','ts8','ts10'],
+      tfpaps_uv5_incendie_exam: ['ti1','ti3','ti5','ti7','ti9','ti11','ti13','ti15','ti17','ti19','ti2','ti4','ti6','ti8','ti10'],
+      tfpaps_uv6_cpp_exam: ['tcpp1','tcpp3','tcpp5','tcpp7','tcpp9','tcpp11','tcpp13','tcpp15','tcpp2','tcpp4','tcpp6','tcpp8'],
+      tfpaps_uv7_terrorisme_exam: ['tter1','tter3','tter5','tter7','tter9','tter11','tter13','tter15','tter2','tter4','tter6','tter8'],
+      tfpaps_uv8_professionnel_exam: ['tpro1','tpro3','tpro5','tpro7','tpro9','tpro11','tpro13','tpro15','tpro17','tpro19','tpro2','tpro4','tpro6','tpro8','tpro10'],
+      tfpaps_uv9_palpation_exam: ['tpal1','tpal3','tpal5','tpal7','tpal9','tpal11','tpal2','tpal4','tpal6','tpal8'],
+      tfpaps_uv10_electronique_exam: ['tele1','tele3','tele5','tele7','tele9','tele11','tele13','tele15','tele2','tele4','tele6','tele8'],
+      tfpaps_uv11_risques_exam: ['tris1','tris3','tris5','tris7','tris9','tris11','tris13','tris15','tris2','tris4','tris6','tris8'],
+      tfpaps_uv12_evenementiel_exam: ['teve1','teve3','teve5','teve7','teve9','teve11','teve13','teve15','teve2','teve4','teve6','teve8'],
+      tfpaps_uv13_conflits_degrades_exam: ['tcd1','tcd3','tcd5','tcd7','tcd9','tcd11','tcd2','tcd4','tcd6','tcd8'],
+      tfpaps_uv14_industriel_exam: ['tind1','tind3','tind5','tind7','tind9','tind11','tind2','tind4','tind6','tind8'],
+    };
+
+    // ===== FONCTION POUR MÉLANGER UN TABLEAU =====
+    function shuffleArray(array) {
+      const arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    // ===== FONCTION POUR OBTENIR LES QUESTIONS =====
+    function getQuestionsForTheme(themeKey, isExam) {
+      const bank = QUESTION_BANK[themeKey];
+      if (!bank) return [];
+      
+      if (isExam) {
+        // Examen : utiliser la série spécifique
+        const examKey = themeKey + '_exam';
+        const examIds = EXAM_SERIES[examKey];
+        if (!examIds) return shuffleArray(bank);
+        
+        // Récupérer les questions correspondant aux ID
+        const examQuestions = [];
+        const idMap = {};
+        bank.forEach(q => { idMap[q.id] = q; });
+        
+        examIds.forEach(id => {
+          if (idMap[id]) {
+            examQuestions.push(idMap[id]);
+          }
+        });
+        
+        return examQuestions;
+      } else {
+        // Exercices : sélection aléatoire de 15 questions
+        const shuffled = shuffleArray(bank);
+        // Prendre 15 questions ou moins si le total est inférieur
+        const count = Math.min(15, shuffled.length);
+        return shuffled.slice(0, count);
+      }
+    }
 
     // ===== ÉTAT =====
     let currentMode = 'ssiap1';
@@ -1079,6 +1434,7 @@
     let timeoutCount = 0;
     let pendingMode = null;
     let pendingTheme = null;
+    let isExamMode = false;
     const CIRCUMFERENCE = 2 * Math.PI * 24;
     const DISPLAY_DELAY = 4000;
 
@@ -1126,17 +1482,37 @@
     const themeIcons = {
       incendie: '🔥',
       secours: '🚑',
-      juridique: '⚖️',
-      technique: '🔧',
-      securite: '🛡️'
+      uv2_juridique: '⚖️',
+      uv3_conflits: '🤝',
+      uv4_strategique: '🎯',
+      uv5_incendie: '🔥',
+      uv6_cpp: '📜',
+      uv7_terrorisme: '⚠️',
+      uv8_professionnel: '💼',
+      uv9_palpation: '✋',
+      uv10_electronique: '📡',
+      uv11_risques: '📊',
+      uv12_evenementiel: '🎪',
+      uv13_conflits_degrades: '⚡',
+      uv14_industriel: '🏭'
     };
 
     const themeNames = {
       incendie: 'Incendie',
       secours: 'Premiers secours',
-      juridique: 'Juridique',
-      technique: 'Technique',
-      securite: 'Sécurité'
+      uv2_juridique: 'UV 2 – Juridique',
+      uv3_conflits: 'UV 3 – Gestion des conflits',
+      uv4_strategique: 'UV 4 – Module stratégique',
+      uv5_incendie: 'UV 5 – Incendie',
+      uv6_cpp: 'UV 6 – Art. 73 CPP',
+      uv7_terrorisme: 'UV 7 – Terrorisme',
+      uv8_professionnel: 'UV 8 – Professionnel',
+      uv9_palpation: 'UV 9 – Palpation',
+      uv10_electronique: 'UV 10 – Électronique',
+      uv11_risques: 'UV 11 – Gestion des risques',
+      uv12_evenementiel: 'UV 12 – Événementiel',
+      uv13_conflits_degrades: 'UV 13 – Conflits dégradés',
+      uv14_industriel: 'UV 14 – Industriel'
     };
 
     function openPopup(mode, theme) {
@@ -1168,14 +1544,32 @@
       const theme = pendingTheme;
       closePopup();
       
+      isExamMode = examBlanc;
       currentMode = mode;
       currentTheme = theme;
+      
+      // Construire la clé pour la banque de questions
       const key = `${mode}_${theme}`;
-      currentQuestions = QUESTIONS[key] || QUESTIONS.ssiap1_incendie;
+      
+      // Récupérer les questions selon le mode (exercice ou examen)
+      currentQuestions = getQuestionsForTheme(key, examBlanc);
+      
+      // Si pas de questions, utiliser la banque complète
+      if (!currentQuestions || currentQuestions.length === 0) {
+        const bank = QUESTION_BANK[key] || [];
+        currentQuestions = shuffleArray(bank);
+        currentQuestions = currentQuestions.slice(0, Math.min(15, currentQuestions.length));
+      }
+      
       totalQuestions = currentQuestions.length;
       resetExamState();
       showExamPage();
       renderQuestion();
+      
+      // Mettre à jour le titre
+      const modeLabel = mode === 'ssiap1' ? 'SSIAP 1' : 'TFP APS';
+      const examLabel = examBlanc ? 'Examen blanc' : 'Exercices libres';
+      document.getElementById('examTitle').textContent = `${examLabel} ${modeLabel}`;
     }
 
     popupExercices.addEventListener('click', () => startFromPopup(false));
@@ -1527,10 +1921,18 @@
       backHomeBtn.addEventListener('click', showHomePage);
       backHomeFromResultBtn.addEventListener('click', showHomePage);
       retryBtn.addEventListener('click', () => {
+        // Recharger les mêmes questions
+        const key = `${currentMode}_${currentTheme}`;
+        currentQuestions = getQuestionsForTheme(key, isExamMode);
+        totalQuestions = currentQuestions.length;
         resetExamState();
         renderQuestion();
       });
       resetExamBtn.addEventListener('click', () => {
+        // Recharger les mêmes questions
+        const key = `${currentMode}_${currentTheme}`;
+        currentQuestions = getQuestionsForTheme(key, isExamMode);
+        totalQuestions = currentQuestions.length;
         resetExamState();
         renderQuestion();
       });
